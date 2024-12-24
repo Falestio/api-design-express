@@ -1,9 +1,10 @@
 import express, { Express } from "express";
+import "reflect-metadata";
 import dotenv from "dotenv";
 import { rateLimit } from "express-rate-limit";
 import swaggerUi from "swagger-ui-express";
 
-import { AppDataSource } from "@/infrastructure/db";
+import AppDataSource from "@/infrastructure/db/dataSourceLocal";
 import router from "@/interfaces/api";
 import errorHandler from "@/middlewares/error.middleware";
 import swaggerSpec from "@/config/swagger";
