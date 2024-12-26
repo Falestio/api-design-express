@@ -7,10 +7,10 @@
     "build": "npx tsc",
     "start": "node dist/index.js",
     "dev": "ts-node-dev -r tsconfig-paths/register src/index.ts",
-    "typeorm:generate": "npm run build && npx typeorm-ts-node-commonjs migration:generate -d dist/infrastructure/db/dataSourceLocal.js",
-    "typeorm:migrate": "npm run build && npx typeorm-ts-node-commonjs migration:run -d dist/infrastructure/db/dataSourceLocal.js",
-    "typeorm:revert": "npm run build && npx typeorm-ts-node-commonjs migration:revert -d dist/infrastructure/db/dataSourceLocal.js",
-    "typeorm:drop": "npm run build && npx typeorm-ts-node-commonjs schema:drop -d dist/infrastructure/db/dataSourceLocal.js"
+    "typeorm:generate": "npx typeorm-ts-node-commonjs migration:generate -d src/infrastructure/db/dataSourceLocal.ts",
+    "typeorm:migrate": "npx typeorm-ts-node-commonjs migration:run -d src/infrastructure/db/dataSourceLocal.ts",
+    "typeorm:revert": "npx typeorm-ts-node-commonjs migration:revert -d src/infrastructure/db/dataSourceLocal.ts",
+    "typeorm:drop": "npx typeorm-ts-node-commonjs schema:drop -d src/infrastructure/db/dataSourceLocal.ts"
   },
   "dependencies": {
     "@types/swagger-jsdoc": "^6.0.4",

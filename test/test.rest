@@ -26,3 +26,43 @@ Content-Type: application/json
 
 ### Delete a user
 DELETE http://localhost:3000/api/v1/users/b94bd40b-5bd8-4aec-b741-d499c2be0393
+
+### Get All Transactions
+GET http://localhost:3000/api/v1/transactions
+Content-Type: application/json
+
+### Create a New Transaction
+POST http://localhost:3000/api/v1/transactions
+Content-Type: application/json
+
+{
+  "type": "pemasukan",
+  "amount": 1500000,
+  "description": "Gaji bulanan",
+  "category": "gaji",
+  "userId": "user_id_here" // Ganti dengan ID user yang valid
+}
+
+
+### Get Transaction by ID
+GET http://localhost:3000/api/v1/transactions/transaction_id_here
+Content-Type: application/json
+
+###
+
+### Update Transaction
+PUT http://localhost:3000/api/v1/transactions/transaction_id_here
+Content-Type: application/json
+
+{
+  "type": "pengeluaran",
+  "amount": 500000,
+  "description": "Belanja bulanan",
+  "category": "belanja"
+}
+
+###
+
+### Delete Transaction
+DELETE http://localhost:3000/api/v1/transactions/transaction_id_here
+Content-Type: application/json
